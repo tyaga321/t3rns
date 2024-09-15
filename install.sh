@@ -66,8 +66,4 @@ cd
 chmod +x run_executor.sh
 ./run_executor.sh
 
-
-
 rm t3rn.sh
-echo "Setup complete! The Executor is now running."
-echo "Subscribe: https://t.me/HappyCuanAirdrop"
