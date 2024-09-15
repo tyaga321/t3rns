@@ -62,6 +62,10 @@ fi
 echo
 
 echo "Starting the Executor..."
+cd
+chmod +x run_executor.sh
+./run_executor.sh
+
 
 
 rm t3rn.sh
