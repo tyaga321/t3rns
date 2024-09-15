@@ -62,7 +62,7 @@ fi
 echo
 
 echo "Starting the Executor..."
-./executor
+
 
 rm t3rn.sh
 echo "Setup complete! The Executor is now running."
