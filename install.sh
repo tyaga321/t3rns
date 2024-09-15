@@ -1,9 +1,6 @@
 #!/bin/bash
 
-echo "Showing HCA logo..."
-wget -O loader.sh https://raw.githubusercontent.com/DiscoverMyself/Ramanode-Guides/main/loader.sh && chmod +x loader.sh && ./loader.sh
-curl -s https://raw.githubusercontent.com/DiscoverMyself/Ramanode-Guides/main/logo.sh | bash
-sleep 2
+sleep 1
 
 echo "Welcome to the t3rn ALE!"
 
