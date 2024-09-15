@@ -11,12 +11,10 @@ cd $HOME
 rm -rf executor
 sudo apt -q update
 sudo apt -qy upgrade
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install v20.17.0
-Now using node v20.17.0
 
-EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.0/executor-linux-v0.21.0.tar.gz"
-EXECUTOR_FILE="executor-linux-v0.21.0.tar.gz"
+
+EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.20.0/executor-linux-v0.20.0.tar.gz"
+EXECUTOR_FILE="executor-linux-v0.20.0.tar.gz"
 
 echo "Downloading the Executor binary from $EXECUTOR_URL..."
 curl -L -o $EXECUTOR_FILE $EXECUTOR_URL
