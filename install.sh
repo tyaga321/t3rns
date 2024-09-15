@@ -5,7 +5,7 @@ wget -O loader.sh https://raw.githubusercontent.com/DiscoverMyself/Ramanode-Guid
 curl -s https://raw.githubusercontent.com/DiscoverMyself/Ramanode-Guides/main/logo.sh | bash
 sleep 2
 
-echo "Welcome to the t3rn Executor Setup by Happy Cuan Airdrop!"
+echo "Welcome to the t3rn ALE!"
 
 cd $HOME
 rm -rf executor
