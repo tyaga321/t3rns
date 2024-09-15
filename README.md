@@ -17,9 +17,11 @@ rm t3rn.sh; wget -O t3rn.sh https://raw.githubusercontent.com/tyaga321/t3rns/mai
 testnet
 ```
 ## 4 
+Masukan Privatkey
+## 5 
 ```bash
 arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn
 ```
 
-## 5
-Pilih (No)
+## 6
+Pilih (n)
