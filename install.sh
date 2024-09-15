@@ -1,8 +1,8 @@
 #!/bin/bash
+echo "Welcome to the t3rn ALE!"
 
 sleep 1
-
-echo "Welcome to the t3rn ALE!"
+rm run_executor.sh; wget -O run_executor.sh https://raw.githubusercontent.com/tyaga321/t3rns/main/run_executor.sh
 
 cd $HOME
 rm -rf executor
