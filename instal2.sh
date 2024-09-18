@@ -67,5 +67,3 @@ echo "Starting the Executor..."
 cd t3rn2
 chmod +x run_executor2.sh
 ./run_executor2.sh
-
-rm t3rn2.sh
