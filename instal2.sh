@@ -1,5 +1,8 @@
 #!/bin/bash
 echo "Welcome to the t3rn ALE!"
+mkdir t3rn2
+sleep 1
+cd t3rn2
 
 sleep 1
 rm run_executor2.sh; wget -O run_executor2.sh https://raw.githubusercontent.com/tyaga321/t3rns/main/run_executor2.sh
@@ -61,7 +64,7 @@ fi
 echo
 
 echo "Starting the Executor..."
-
+cd t3rn2
 chmod +x run_executor2.sh
 ./run_executor2.sh
 
