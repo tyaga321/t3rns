@@ -42,7 +42,7 @@ export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-se
 
 read -p "KEY ALCHEMY: " KEYALCHEMY
 
-export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/=$KEYALCHEMY"
+export RPC_ENDPOINTS_ARBT="https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 
 export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 
