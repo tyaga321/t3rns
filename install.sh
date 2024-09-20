@@ -2,7 +2,6 @@
 echo "Welcome to the t3rn ALE!"
 
 sleep 1
-rm run_executor.sh; wget -O run_executor.sh https://raw.githubusercontent.com/tyaga321/t3rns/main/run_executor.sh
 
 cd $HOME
 rm -rf executor
@@ -11,8 +10,6 @@ sudo apt -qy upgrade
 
 
 EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.21.1/executor-linux-v0.21.1.tar.gz"
-
-
 EXECUTOR_FILE="executor-linux-v0.21.1.tar.gz"
 
 echo "Downloading the Executor binary from $EXECUTOR_URL..."
@@ -31,15 +28,10 @@ cd executor/executor/bin
 echo "Binary downloaded and extracted successfully."
 echo
 
-read -p "Enter your preferred Node Environment (e.g., testnet, mainnet): " NODE_ENV
-export NODE_ENV=${NODE_ENV:-testnet}
-echo "Node Environment set to: $NODE_ENV"
-echo
-
+export NODE_ENV=testnet
 export LOG_LEVEL=debug
 export LOG_PRETTY=false
-echo "Log settings configured: LOG_LEVEL=$LOG_LEVEL, LOG_PRETTY=$LOG_PRETTY"
-echo
+
 
 read -s -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
@@ -47,23 +39,14 @@ echo -e "\nPrivate key has been set."
 echo
 
 read -p "Enter the networks to operate on (comma-separated, e.g., arbitrum-sepolia,base-sepolia): " ENABLED_NETWORKS
-export ENABLED_NETWORKS=${ENABLED_NETWORKS:-arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn}
-echo "Enabled Networks set to: $ENABLED_NETWORKS"
-echo
+export ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn
 
-read -p "Would you like to set custom RPC URLs? (y/n): " SET_RPC
-if [ "$SET_RPC" == "y" ]; then
-  for NETWORK in $(echo $ENABLED_NETWORKS | tr "," "\n"); do
-    read -p "Enter the RPC URLs for $NETWORK (comma-separated): " RPC_URLS
-    export EXECUTOR_${NETWORK^^}_RPC_URLS=$RPC_URLS
-    echo "RPC URLs set for $NETWORK"
-  done
-else
-  echo "Skipping custom RPC URL setup. Default URLs will be used."
-fi
-echo
+read -p "Enter the networks to operate on (comma-separated, e.g., arbitrum-sepolia,base-sepolia): " ENABLED_NETWORKS
+export ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn
+export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
+export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
+export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
+export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
 
 echo "Starting the Executor..."
 ./executor
-
-rm t3rn.sh
