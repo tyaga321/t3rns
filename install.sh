@@ -38,7 +38,7 @@ export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 echo -e "\nPrivate key has been set."
 echo
 
-export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
 
 read -p "POIN KEY ALCHEMY: " KEYALCHEMY
 export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY'
