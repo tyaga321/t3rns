@@ -33,20 +33,18 @@ export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
 
-read -s -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
+read -p "Enter your Private Key from Metamask: " PRIVATE_KEY_LOCAL
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 echo -e "\nPrivate key has been set."
 echo
 
-read -p "Enter the networks to operate on (comma-separated, e.g., arbitrum-sepolia,base-sepolia): " ENABLED_NETWORKS
 export ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn
 
-read -p "Enter the networks to operate on (comma-separated, e.g., arbitrum-sepolia,base-sepolia): " ENABLED_NETWORKS
-export ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn
-export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
-export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
-export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
-export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/uDorUCFfkmofzS7jXmJ1yRfgKyeR8scM'
+read -p "POIN KEY ALCHEMY: " KEYALCHEMY
+export RPC_ENDPOINTS_ARBT='https://arb-sepolia.g.alchemy.com/v2/$KEYALCHEMY'
+export RPC_ENDPOINTS_BSSP='https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY'
+export RPC_ENDPOINTS_BLSS='https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY'
+export RPC_ENDPOINTS_OPSP='https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY'
 
 echo "Starting the Executor..."
 ./executor
