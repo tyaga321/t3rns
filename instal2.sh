@@ -4,12 +4,10 @@ echo "Welcome to the t3rn ALE!"
 sleep 1
 rm run_executor.sh; wget -O run_executor.sh https://raw.githubusercontent.com/tyaga321/t3rns/main/run_executor.sh
 
-
 cd $HOME
 rm -rf executor
 sudo apt -q update
 sudo apt -qy upgrade
-
 
 EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/v0.19.0/executor-linux-v0.19.0.tar.gz"
 EXECUTOR_FILE="executor-linux-v0.19.0.tar.gz"
@@ -25,7 +23,7 @@ fi
 echo "Extracting the binary..."
 tar -xzvf $EXECUTOR_FILE
 rm -rf $EXECUTOR_FILE
-cd t3rn2/executor/executor/bin
+cd executor/executor/bin
 
 echo "Binary downloaded and extracted successfully."
 echo
