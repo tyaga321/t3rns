@@ -48,6 +48,7 @@ export RPC_ENDPOINTS_BSSP="https://base-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 
 export RPC_ENDPOINTS_BLSS="https://blast-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
 export RPC_ENDPOINTS_OPSP="https://opt-sepolia.g.alchemy.com/v2/$KEYALCHEMY"
+export RPC_ENDPOINTS_l1rn='https://brn.rpc.caldera.xyz/http'
 
 echo "Starting the Executor..."
 ./executor
